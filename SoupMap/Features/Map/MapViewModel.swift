@@ -204,9 +204,7 @@ final class MapViewModel: ObservableObject {
         ripplingIDs.insert(activityID)
         Task {
             try? await Task.sleep(nanoseconds: 1_200_000_000)
-            await MainActor.run {
-                ripplingIDs.remove(activityID)
-            }
+            ripplingIDs.remove(activityID)
         }
     }
 

@@ -129,11 +129,11 @@ struct CreateActivityView: View {
                     .allowOverlap(true)
                 }
                 .mapStyle(.standard(lightPreset: .dusk))
-                .frame(height: 260)
-                .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
                 .onCameraChanged { context in
                     viewModel.draft.coordinate = context.cameraState.center
                 }
+                .frame(height: 260)
+                .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
 
                 Image(systemName: "plus")
                     .font(.system(size: 24, weight: .bold))

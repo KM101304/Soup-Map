@@ -50,10 +50,10 @@ struct MapScreen: View {
                 }
             }
             .mapStyle(.standard(lightPreset: .dusk))
-            .ignoresSafeArea()
             .onCameraChanged { context in
                 viewModel.cameraZoom = context.cameraState.zoom
             }
+            .ignoresSafeArea()
 
             LinearGradient(
                 colors: [Color.black.opacity(0.42), .clear, Color.black.opacity(0.48)],
