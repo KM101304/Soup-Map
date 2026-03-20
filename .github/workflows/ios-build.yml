@@ -1,0 +1,40 @@
+name: iOS Build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Create CI secrets config
+        run: |
+          cat <<'EOF' > Config/Secrets.xcconfig
+          SUPABASE_URL = https://example.supabase.co
+          SUPABASE_ANON_KEY = ci-anon-key
+          MAPBOX_ACCESS_TOKEN = ci-mapbox-token
+          SOUPMAP_URL_SCHEME = soupmap
+          SOUPMAP_BUNDLE_ID = com.soupmap.ci
+          EOF
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+
+      - name: Build SoupMap for iOS Simulator
+        run: |
+          xcodebuild \
+            -project SoupMap.xcodeproj \
+            -scheme SoupMap \
+            -destination "generic/platform=iOS Simulator" \
+            CODE_SIGNING_ALLOWED=NO \
+            build

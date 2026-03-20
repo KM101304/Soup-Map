@@ -313,6 +313,16 @@ xcodegen generate
 open SoupMap.xcodeproj
 ```
 
+### Linux / Codespaces project generation
+
+If you are not on macOS, you can still generate the `.xcodeproj` using Docker plus the official Swift 6.2.3 Ubuntu 24.04 image:
+
+```bash
+./scripts/generate_project_linux.sh
+```
+
+This validates the XcodeGen spec and emits `SoupMap.xcodeproj`, but it does not replace a real Xcode build.
+
 ## Environment variables
 
 Environment values are supplied via xcconfig:
@@ -334,6 +344,15 @@ They are read from `Info.plist` at runtime.
 - Privacy policy content is bundled in-app and mirrored in docs.
 - The app ships with meaningful empty-state examples so the map never feels dead.
 
+## CI build
+
+The repository includes a macOS GitHub Actions workflow at `.github/workflows/ios-build.yml` that:
+
+- installs XcodeGen on a macOS runner
+- writes a CI-only `Config/Secrets.xcconfig`
+- generates `SoupMap.xcodeproj`
+- builds the app for the generic iOS Simulator using `xcodebuild`
+
 ## Verification notes
 
-This workspace does not include Xcode, so the project structure and source were written for handoff and generation on macOS, but could not be compiled or simulator-tested in this environment.
+This workspace does not include Xcode, so a native local iOS compile is still not possible here. The Linux-side tooling now validates project generation, and the GitHub Actions workflow provides the real macOS/Xcode build path.
