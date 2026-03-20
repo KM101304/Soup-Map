@@ -1,0 +1,4 @@
+#include? "Secrets.xcconfig"
+
+APP_ENVIRONMENT = release
+OTHER_SWIFT_FLAGS = $(inherited)

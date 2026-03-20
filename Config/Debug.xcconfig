@@ -1,0 +1,5 @@
+#include? "Secrets.xcconfig"
+
+APP_ENVIRONMENT = debug
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG
+OTHER_SWIFT_FLAGS = $(inherited)
