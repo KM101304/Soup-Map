@@ -15,58 +15,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b5N-sR-z8M">
-                                <rect key="frame" x="126" y="340" width="140" height="140"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9w5-Rk-rjP">
-                                        <rect key="frame" x="22" y="22" width="96" height="96"/>
-                                        <color key="backgroundColor" red="0.39607843140000001" green="0.81960784310000005" blue="0.71372549019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <real key="value" value="48"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3RF-jb-9k9">
-                                        <rect key="frame" x="51" y="8" width="38" height="38"/>
-                                        <color key="backgroundColor" red="0.98431372550000003" green="0.47058823530000002" blue="0.37647058819999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <real key="value" value="19"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nC6-Na-7o2">
-                                        <rect key="frame" x="85" y="84" width="26" height="26"/>
-                                        <color key="backgroundColor" red="0.97254901959999999" green="0.72941176469999999" blue="0.32549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <real key="value" value="13"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Soupmark" translatesAutoresizingMaskIntoConstraints="NO" id="pbA-VL-8zM">
+                                <rect key="frame" x="126.5" y="339" width="140" height="140"/>
                                 <constraints>
-                                    <constraint firstItem="9w5-Rk-rjP" firstAttribute="centerX" secondItem="b5N-sR-z8M" secondAttribute="centerX" id="1S8-zN-n5H"/>
-                                    <constraint firstItem="9w5-Rk-rjP" firstAttribute="centerY" secondItem="b5N-sR-z8M" secondAttribute="centerY" id="4Ra-4P-7NL"/>
-                                    <constraint firstAttribute="height" constant="140" id="7rB-1k-6iG"/>
-                                    <constraint firstAttribute="width" constant="140" id="AuT-M9-9P1"/>
-                                    <constraint firstItem="3RF-jb-9k9" firstAttribute="centerX" secondItem="b5N-sR-z8M" secondAttribute="centerX" id="DP5-tG-vOD"/>
-                                    <constraint firstItem="3RF-jb-9k9" firstAttribute="centerY" secondItem="b5N-sR-z8M" secondAttribute="centerY" constant="-43" id="Ysa-Zv-sjR"/>
-                                    <constraint firstItem="nC6-Na-7o2" firstAttribute="centerX" secondItem="b5N-sR-z8M" secondAttribute="centerX" constant="40" id="o9f-Gx-KeL"/>
-                                    <constraint firstItem="nC6-Na-7o2" firstAttribute="centerY" secondItem="b5N-sR-z8M" secondAttribute="centerY" constant="28" id="xyj-f7-KKV"/>
+                                    <constraint firstAttribute="width" constant="140" id="QqT-zr-1rI"/>
+                                    <constraint firstAttribute="height" constant="140" id="b2E-Xo-fgt"/>
                                 </constraints>
-                            </view>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="SoupMap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3K-uq-8Hf">
+                                <rect key="frame" x="126" y="499" width="141" height="28"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <color key="textColor" red="0.9529411765" green="0.9607843137" blue="0.9725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
-                        <color key="backgroundColor" red="0.054901960780000003" green="0.062745098039000004" blue="0.090196078430999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0549019608" green="0.062745098" blue="0.0901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="b5N-sR-z8M" firstAttribute="centerY" secondItem="Bcu-3y-fUS" secondAttribute="centerY" id="Nuj-re-IX2"/>
-                            <constraint firstItem="b5N-sR-z8M" firstAttribute="centerX" secondItem="Bcu-3y-fUS" secondAttribute="centerX" id="xkd-TH-2Xp"/>
+                            <constraint firstItem="pbA-VL-8zM" firstAttribute="centerX" secondItem="Bcu-3y-fUS" secondAttribute="centerX" id="7c7-7S-R4O"/>
+                            <constraint firstItem="pbA-VL-8zM" firstAttribute="centerY" secondItem="Bcu-3y-fUS" secondAttribute="centerY" constant="-16" id="E0d-yr-fjM"/>
+                            <constraint firstItem="d3K-uq-8Hf" firstAttribute="top" secondItem="pbA-VL-8zM" secondAttribute="bottom" constant="20" id="L3j-Xy-6gq"/>
+                            <constraint firstItem="d3K-uq-8Hf" firstAttribute="centerX" secondItem="Bcu-3y-fUS" secondAttribute="centerX" id="uW4-WJ-7Fs"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -75,4 +44,7 @@
             <point key="canvasLocation" x="72" y="88"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Soupmark" width="420" height="420"/>
+    </resources>
 </document>
